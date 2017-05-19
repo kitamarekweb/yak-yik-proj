@@ -12,7 +12,7 @@ mongoose.connect(dbUrl, function (err, res) {
     console.log('DB CONNECTION FAILED: ' + err)
   }
   else {
-    console.log('DB CONNECTION SUCCESS: ' +dbUrl)
+    console.log('DB CONNECTION SUCCESS: ' + dbUrl)
   }
 })
 
