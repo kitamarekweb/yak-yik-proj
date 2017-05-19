@@ -1,4 +1,4 @@
-var express = reguire('express')
+var express = require('express')
 var router = express.Router()
 
 router.get('/:resource', function (req, res, next) {
