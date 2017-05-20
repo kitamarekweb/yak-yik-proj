@@ -7,17 +7,17 @@ router.get('/:resource', function (req, res, next) {
   var resource = req.params.resource
   var controller = controllers[resource]
 
-  if(controller == null){
+  if (controller == null) {
     res.json({
       confirmation: 'fail to find controler',
-      message: 'Invalid Resource Request: ' +resource
+      message: 'Invalid Resource Request: ' + resource
     })
 
     return
   }
 
   controller.find(req.query, function (err, result) {
-    if (err){
+    if (err) {
       res.json({
         confirmation: 'fail',
         message: err
@@ -41,17 +41,17 @@ router.get('/:resource/:id', function (req, res, next) {
 
   var controller = controllers[resource]
 
-  if(controller == null){
+  if (controller == null) {
     res.json({
       confirmation: 'fail to find controler',
-      message: 'Invalid Resource Request: ' +resource
+      message: 'Invalid Resource Request: ' + resource
     })
 
     return
   }
 
   controller.findById(id, function (err, result) {
-    if (err){
+    if (err) {
       res.json({
         confirmation: 'fail',
         message: 'Not Found ID'
@@ -68,23 +68,33 @@ router.get('/:resource/:id', function (req, res, next) {
 })
 
 router.post('/:resource', function (req, res, next) {
-    var resource = req.params.resource
-    if (resource == 'zone'){
-      ZoneController.create(req.body, function (err, result) {
-        if (err){
-          res.json({
-            confirmation: 'fail to create',
-            message: err
-          })
-          return
-        }
+  var resource = req.params.resource
+  var controller = controllers[resource]
 
+  if(controller == null){
+    res.json({
+      confirmation: 'fail to find controler',
+      message: 'Invalid Resource Request: ' +resource
+    })
+
+    return
+  }
+
+    controller.create(req.body, function (err, result) {
+      if (err) {
         res.json({
-          confirmation: 'success to create',
-          result: result
+          confirmation: 'fail to create',
+          message: err
         })
+        return
+      }
+
+      res.json({
+        confirmation: 'success to create',
+        result: result
       })
-    }
+    })
+
 
 })
 
