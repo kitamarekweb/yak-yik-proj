@@ -12,8 +12,15 @@ module.exports = {
     })
   },
   
-  findById: function () {
-    
+  findById: function (id, callback) {
+    Zone.findById(id, function (err, zone) {
+      if (err){
+        callback(err, null)
+        return
+      }
+
+      callback(null, zone)
+    })
   },
   
   create: function () {
