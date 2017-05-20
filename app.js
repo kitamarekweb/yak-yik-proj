@@ -12,6 +12,7 @@ mongoose.connect(dbUrl, function (err, res) {
     console.log('DB CONNECTION FAILED: ' + err)
   }
   else {
+    //MongoDB had to be installed (Community Edition)
     console.log('DB CONNECTION SUCCESS: ' + dbUrl)
   }
 })
