@@ -9548,12 +9548,70 @@ var Zones = function (_Component) {
   }
 
   _createClass(Zones, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
+        "div",
         null,
-        'Zones!!'
+        _react2.default.createElement(
+          "ol",
+          null,
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "div",
+              null,
+              _react2.default.createElement(
+                "h2",
+                null,
+                _react2.default.createElement(
+                  "a",
+                  { href: "" },
+                  "Zone 1"
+                )
+              ),
+              _react2.default.createElement(
+                "span",
+                null,
+                "10012"
+              ),
+              _react2.default.createElement("br", null),
+              _react2.default.createElement(
+                "span",
+                null,
+                "10 comments"
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "a",
+              { href: "" },
+              "Zone 2"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "a",
+              { href: "" },
+              "Zone 3"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "a",
+              { href: "" },
+              "Zone 4"
+            )
+          )
+        )
       );
     }
   }]);
