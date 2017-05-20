@@ -6,7 +6,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <p>non react!</p>
 
     <script type="text/javascript" src="/build/bundel.js"></script>
   </body>
