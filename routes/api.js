@@ -33,7 +33,7 @@ router.get('/:resource/:id', function (req, res, next) {
       if (err){
         res.json({
           confirmation: 'fail',
-          message: err
+          message: 'Not Found ID'
         })
         return
       }
