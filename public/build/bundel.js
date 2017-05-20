@@ -9563,7 +9563,7 @@ var App = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'Hello React!'
+        'Hello React! How !!'
       );
     }
   }]);
@@ -9571,7 +9571,7 @@ var App = function (_Component) {
   return App;
 }(_react.Component);
 
-_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('root'));
+_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById("root"));
 
 /***/ }),
 /* 83 */
