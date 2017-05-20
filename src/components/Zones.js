@@ -12,9 +12,21 @@ class Zones extends Component {
               <span>10 comments</span>
             </div>
           </li>
-          <li><a href="">Zone 2</a></li>
-          <li><a href="">Zone 3</a></li>
-          <li><a href="">Zone 4</a></li>
+          <li>
+            <div>
+              <h2><a href="">Zone 2</a></h2>
+              <span>10013</span><br/>
+              <span>10 comments</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h2><a href="">Zone 3</a></h2>
+              <span>10014</span><br/>
+              <span>10 comments</span>
+            </div>
+          </li>
+
         </ol>
 
       </div>

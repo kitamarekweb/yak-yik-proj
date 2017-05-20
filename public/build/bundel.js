@@ -9588,27 +9588,56 @@ var Zones = function (_Component) {
             "li",
             null,
             _react2.default.createElement(
-              "a",
-              { href: "" },
-              "Zone 2"
+              "div",
+              null,
+              _react2.default.createElement(
+                "h2",
+                null,
+                _react2.default.createElement(
+                  "a",
+                  { href: "" },
+                  "Zone 2"
+                )
+              ),
+              _react2.default.createElement(
+                "span",
+                null,
+                "10013"
+              ),
+              _react2.default.createElement("br", null),
+              _react2.default.createElement(
+                "span",
+                null,
+                "10 comments"
+              )
             )
           ),
           _react2.default.createElement(
             "li",
             null,
             _react2.default.createElement(
-              "a",
-              { href: "" },
-              "Zone 3"
-            )
-          ),
-          _react2.default.createElement(
-            "li",
-            null,
-            _react2.default.createElement(
-              "a",
-              { href: "" },
-              "Zone 4"
+              "div",
+              null,
+              _react2.default.createElement(
+                "h2",
+                null,
+                _react2.default.createElement(
+                  "a",
+                  { href: "" },
+                  "Zone 3"
+                )
+              ),
+              _react2.default.createElement(
+                "span",
+                null,
+                "10014"
+              ),
+              _react2.default.createElement("br", null),
+              _react2.default.createElement(
+                "span",
+                null,
+                "10 comments"
+              )
             )
           )
         )
