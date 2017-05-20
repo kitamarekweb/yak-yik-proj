@@ -9,3 +9,5 @@ class Zones extends Component {
     )
   }
 }
+
+export default Zones
