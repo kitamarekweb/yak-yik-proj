@@ -7,6 +7,15 @@ router.get('/:resource', function (req, res, next) {
   var resource = req.params.resource
   var controller = controllers[resource]
 
+  if(controller == null){
+    res.json({
+      confirmation: 'fail to find controler',
+      message: 'Invalid Resource Request: ' +resource
+    })
+
+    return
+  }
+
   controller.find(req.query, function (err, result) {
     if (err){
       res.json({
