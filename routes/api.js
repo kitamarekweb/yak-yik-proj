@@ -22,11 +22,6 @@ router.get('/:resource', function (req, res, next) {
       })
     })
   }
-
-  res.json({
-    confirmation: 'success',
-    resource: resource
-  })
 })
 
 module.exports = router
