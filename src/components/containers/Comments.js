@@ -8,7 +8,8 @@ class Comments extends Component {
     this.state = {
       comment: {
         username: '',
-        body: ''
+        body: '',
+        timestamp: ''
       },
       list: [
         {body: 'comment 1', username: 'dtrump', timestamp: '10:30'},
@@ -42,7 +43,15 @@ class Comments extends Component {
     this.setState({
       comment: updatedComment
     })
+  }
 
+  updateTimestamp(event){
+    //we create a copy of full state
+    let updatedTimestamp = Object.assign({}, this.state.comment)
+    updatedTimestamp['timestamp'] = event.target.value
+    this.setState({
+      comment: updatedTimestamp
+    })
   }
 
   render() {
@@ -62,6 +71,7 @@ class Comments extends Component {
 
           <input onChange={this.updateUsername.bind(this)} className="form-control" type="text" placeholder="Username"/><br/>
           <input onChange={this.updateBody.bind(this)} className="form-control" type="text" placeholder="Comment"/><br/>
+          <input onChange={this.updateTimestamp.bind(this)} className="form-control" type="text" placeholder="Timestamp"/><br/>
           <button onClick={this.submitComment.bind(this)} className="btn btn-info">Submit Comment</button>
 
         </div>
