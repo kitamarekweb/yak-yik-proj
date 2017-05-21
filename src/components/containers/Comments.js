@@ -14,6 +14,10 @@ class Comments extends Component {
     }
   }
 
+  submitComment(){
+
+  }
+
   render() {
     const commentList = this.state.list.map((comment, i) => {
       return (
@@ -31,7 +35,7 @@ class Comments extends Component {
 
           <input className="form-control" type="text" placeholder="Username"/><br/>
           <input className="form-control" type="text" placeholder="Comment"/><br/>
-          <button className="btn btn-info">Submit Comment</button>
+          <button onClick={this.submitComment.bind(this)} className="btn btn-info">Submit Comment</button>
 
         </div>
       </div>
