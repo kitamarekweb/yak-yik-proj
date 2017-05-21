@@ -9689,7 +9689,7 @@ var Comment = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'This is a comment'
+        this.props.currentComment.body
       );
     }
   }]);
@@ -9749,7 +9749,7 @@ var Comments = function (_Component) {
         return _react2.default.createElement(
           'li',
           null,
-          _react2.default.createElement(_Comment2.default, null)
+          _react2.default.createElement(_Comment2.default, { currentComment: comment })
         );
       });
       return _react2.default.createElement(

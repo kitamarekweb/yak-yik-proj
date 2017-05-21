@@ -16,7 +16,7 @@ class Comments extends Component {
   render(){
     const commentList = this.state.list.map((comment, i) => {
       return(
-        <li><Comment/></li>
+        <li><Comment currentComment={comment}/></li>
       )
     })
     return(

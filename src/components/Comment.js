@@ -5,7 +5,7 @@ class Comment extends Component {
   render(){
     return(
       <div>
-        This is a comment
+        {this.props.currentComment.body}
       </div>
     )
   }
