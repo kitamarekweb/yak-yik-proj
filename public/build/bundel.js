@@ -9690,7 +9690,7 @@ var Zone = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { style: { padding: 16, background: 'pink', marginTop: 12, border: '1px solid #000' } },
         _react2.default.createElement(
           'h2',
           { style: { marginBottom: 3 + 'px' } },
