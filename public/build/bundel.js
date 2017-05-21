@@ -9734,12 +9734,24 @@ var Comments = function (_Component) {
   function Comments() {
     _classCallCheck(this, Comments);
 
-    return _possibleConstructorReturn(this, (Comments.__proto__ || Object.getPrototypeOf(Comments)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Comments.__proto__ || Object.getPrototypeOf(Comments)).call(this));
+
+    _this.state = {
+      list: [{ body: 'comment 1', username: 'dtrump' }, { body: 'comment 2', username: 'hclinton' }, { body: 'comment 3', username: 'gjohnson' }]
+    };
+    return _this;
   }
 
   _createClass(Comments, [{
     key: 'render',
     value: function render() {
+      var commentList = this.state.list.map(function (comment, i) {
+        return _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(_Comment2.default, null)
+        );
+      });
       return _react2.default.createElement(
         'div',
         null,
@@ -9751,26 +9763,7 @@ var Comments = function (_Component) {
         _react2.default.createElement(
           'ul',
           null,
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(_Comment2.default, null)
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(_Comment2.default, null)
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(_Comment2.default, null)
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(_Comment2.default, null)
-          )
+          commentList
         )
       );
     }
