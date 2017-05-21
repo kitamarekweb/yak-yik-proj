@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import styles from './styles'
 
 class Zone extends Component {
   render() {
@@ -13,23 +14,5 @@ class Zone extends Component {
     )
   }
 }
-
-  const
-  styles = {
-    container: {
-      padding: 16,
-      background: 'pink',
-      marginTop: 12,
-      border: '1px solid #000'
-    },
-    header: {
-      marginBottom: 3 + 'px'
-    },
-    title: {
-      textDecoration: 'none',
-      color: 'red'
-    }
-  }
-
 
 export default Zone
