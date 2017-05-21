@@ -5,8 +5,8 @@ class Zone extends Component {
     return (
       <div>
         <h2><a href="">{this.props.name}</a></h2>
-        <span>10012</span><br/>
-        <span>10 comments</span>
+        <span>{this.props.zipCode}</span><br/>
+        <span>{this.props.numComments} comments</span>
       </div>
     )
   }
