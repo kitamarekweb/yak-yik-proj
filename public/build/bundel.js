@@ -9690,13 +9690,13 @@ var Zone = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { style: { padding: 16, background: 'pink', marginTop: 12, border: '1px solid #000' } },
+        { style: styles.container },
         _react2.default.createElement(
           'h2',
-          { style: { marginBottom: 3 + 'px' } },
+          { style: styles.header },
           _react2.default.createElement(
             'a',
-            { style: { textDecoration: 'none', color: 'red' }, href: '' },
+            { style: styles.title, href: '' },
             this.props.currentZone.name
           )
         ),
@@ -9718,6 +9718,22 @@ var Zone = function (_Component) {
 
   return Zone;
 }(_react.Component);
+
+var styles = {
+  container: {
+    padding: 16,
+    background: 'pink',
+    marginTop: 12,
+    border: '1px solid #000'
+  },
+  header: {
+    marginBottom: 3 + 'px'
+  },
+  title: {
+    textDecoration: 'none',
+    color: 'red'
+  }
+};
 
 exports.default = Zone;
 
