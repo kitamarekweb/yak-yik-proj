@@ -21,10 +21,16 @@ class Comments extends Component {
 
   submitComment(){
     console.log('submitComment: ' +JSON.stringify(this.state.comment))
+
+    let updatedList = Object.assign([], this.state.list)
+    updatedList.push(this.state.comment)
+    this.setState({
+      list: updatedList
+    })
   }
 
   updateUsername(event){
-    console.log('updateUsername: '+ event.target.value)
+    // console.log('updateUsername: '+ event.target.value)
     //this.state.comment['username'] = event.target.value // WRONG
 
     //we create a copy of full state
@@ -36,7 +42,7 @@ class Comments extends Component {
   }
 
   updateBody(event){
-    console.log('updateBody: '+ event.target.value)
+    // console.log('updateBody: '+ event.target.value)
 
     let updatedComment = Object.assign({}, this.state.comment) //copy of object 'comment' from state, that how React works, always do copy of element before change
     updatedComment['body'] = event.target.value
