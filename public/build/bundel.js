@@ -9739,12 +9739,17 @@ var Comments = function (_Component) {
   }
 
   _createClass(Comments, [{
+    key: 'submitComment',
+    value: function submitComment() {
+      console.log('submitComment');
+    }
+  }, {
     key: 'render',
     value: function render() {
       var commentList = this.state.list.map(function (comment, i) {
         return _react2.default.createElement(
           'li',
-          null,
+          { key: i },
           _react2.default.createElement(_Comment2.default, { currentComment: comment })
         );
       });
@@ -9764,6 +9769,15 @@ var Comments = function (_Component) {
             'ul',
             { style: _styles2.default.comment.commentsList },
             commentList
+          ),
+          _react2.default.createElement('input', { className: 'form-control', type: 'text', placeholder: 'Username' }),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement('input', { className: 'form-control', type: 'text', placeholder: 'Comment' }),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'button',
+            { onClick: this.submitComment.bind(this), className: 'btn btn-info' },
+            'Submit Comment'
           )
         )
       );
@@ -9826,7 +9840,7 @@ var Zones = function (_Component) {
       var listItems = this.state.list.map(function (zone, i) {
         return _react2.default.createElement(
           'li',
-          null,
+          { key: i },
           _react2.default.createElement(_Zone2.default, { currentZone: zone })
         );
       });
