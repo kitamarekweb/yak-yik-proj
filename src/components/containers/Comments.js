@@ -34,8 +34,15 @@ class Comments extends Component {
     })
   }
 
-  updateComment(event){
-    console.log('updateComment: '+ event.target.value)
+  updateBody(event){
+    console.log('updateBody: '+ event.target.value)
+
+    let updatedComment = Object.assign({}, this.state.comment)
+    updatedComment['body'] = event.target.value
+    this.setState({
+      comment: updatedComment
+    })
+
   }
 
   render() {
@@ -54,7 +61,7 @@ class Comments extends Component {
           </ul>
 
           <input onChange={this.updateUsername.bind(this)} className="form-control" type="text" placeholder="Username"/><br/>
-          <input onChange={this.updateComment.bind(this)} className="form-control" type="text" placeholder="Comment"/><br/>
+          <input onChange={this.updateBody.bind(this)} className="form-control" type="text" placeholder="Comment"/><br/>
           <button onClick={this.submitComment.bind(this)} className="btn btn-info">Submit Comment</button>
 
         </div>
