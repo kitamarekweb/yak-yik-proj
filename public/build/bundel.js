@@ -9574,6 +9574,11 @@ var Zones = function (_Component) {
             'li',
             null,
             _react2.default.createElement(_Zone2.default, null)
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(_Zone2.default, null)
           )
         )
       );

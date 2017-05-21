@@ -6,10 +6,10 @@ class Zones extends Component {
     return (
       <div>
         <ol>
-          <li><Zone/></li>
-          <li><Zone/></li>
-          <li><Zone/></li>
-          <li><Zone/></li>
+          <li><Zone name="Zone 1"/></li>
+          <li><Zone name="Zone 2"/></li>
+          <li><Zone name="Zone 3"/></li>
+          <li><Zone name="Zone 4"/></li>
         </ol>
       </div>
     )
