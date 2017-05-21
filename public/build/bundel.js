@@ -9689,7 +9689,11 @@ var Comment = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        this.props.currentComment.body
+        this.props.currentComment.username,
+        _react2.default.createElement('br', null),
+        this.props.currentComment.body,
+        _react2.default.createElement('br', null),
+        this.props.currentComment.timestamp
       );
     }
   }]);
@@ -9737,7 +9741,7 @@ var Comments = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Comments.__proto__ || Object.getPrototypeOf(Comments)).call(this));
 
     _this.state = {
-      list: [{ body: 'comment 1', username: 'dtrump' }, { body: 'comment 2', username: 'hclinton' }, { body: 'comment 3', username: 'gjohnson' }]
+      list: [{ body: 'comment 1', username: 'dtrump', timestamp: '10:30' }, { body: 'comment 2', username: 'hclinton', timestamp: '10:34' }, { body: 'comment 3', username: 'gjohnson', timestamp: '10:39' }]
     };
     return _this;
   }
@@ -9761,9 +9765,13 @@ var Comments = function (_Component) {
           'Comments: Zone 1'
         ),
         _react2.default.createElement(
-          'ul',
-          null,
-          commentList
+          'div',
+          { style: { padding: 12, background: 'deeppink', border: '1px solid #000' } },
+          _react2.default.createElement(
+            'ul',
+            null,
+            commentList
+          )
         )
       );
     }
