@@ -2,12 +2,20 @@ import React, {Component} from 'react'
 import Zone from './Zone'
 
 class Zones extends Component {
-  render() {
-    const firstZone = {name: 'Zone 1', zipCode: '10012', numComments: 10}
-    const secondZone = {name: "Zone 2", zipCode: '10013', numComments: 20}
-    const thirdZone = {name: 'Zone 3', zipCode: '10014', numComments: 30}
-    const fourthZone = {name: 'Zone 4', zipCode: '10015', numComments: 40}
+  //creating state
+  constructor() {
+    super()
+    this.state = {
+      list: [
+        {name: 'Zone 1', zipCode: '10012', numComments: 10},
+        {name: "Zone 2", zipCode: '10013', numComments: 20},
+        {name: 'Zone 3', zipCode: '10014', numComments: 30},
+        {name: 'Zone 4', zipCode: '10015', numComments: 40}
+      ]
+    }
+  }
 
+  render() {
 
     return (
       <div>
