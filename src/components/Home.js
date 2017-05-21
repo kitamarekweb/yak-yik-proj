@@ -1,11 +1,18 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import Zones from './Zones'
 
 class Home extends Component {
-  render(){
-    return(
-      <div>
-        <Zones/>
+  render() {
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4">
+            <Zones/>
+          </div>
+          <div className="col-md-8">
+            Right side
+          </div>
+        </div>
       </div>
     )
   }
