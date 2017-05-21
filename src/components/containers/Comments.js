@@ -6,6 +6,10 @@ class Comments extends Component {
   constructor() {
     super()
     this.state = {
+      comment: {
+        username: '',
+        body: ''
+      },
       list: [
         {body: 'comment 1', username: 'dtrump', timestamp: '10:30'},
         {body: 'comment 2', username: 'hclinton', timestamp: '10:34'},
