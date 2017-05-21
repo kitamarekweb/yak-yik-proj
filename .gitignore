@@ -4,3 +4,4 @@
 node_modules/
 bundel.js
 bundel.map
+/public/build/
