@@ -15,13 +15,13 @@ class Comments extends Component {
   }
 
   submitComment(){
-
+    console.log('submitComment')
   }
 
   render() {
     const commentList = this.state.list.map((comment, i) => {
       return (
-        <li><Comment currentComment={comment}/></li>
+        <li key={i}><Comment currentComment={comment}/></li>
       )
     })
 
