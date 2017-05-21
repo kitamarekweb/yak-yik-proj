@@ -29,6 +29,9 @@ class Comments extends Component {
     //we create a copy of full state
     let updatedComment = Object.assign({}, this.state.comment)
     updatedComment['username'] = event.target.value
+    this.state({
+      comment: updatedComment
+    })
   }
 
   updateComment(event){
