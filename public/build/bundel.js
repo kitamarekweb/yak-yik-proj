@@ -9563,22 +9563,22 @@ var Zones = function (_Component) {
           _react2.default.createElement(
             'li',
             null,
-            _react2.default.createElement(_Zone2.default, null)
+            _react2.default.createElement(_Zone2.default, { name: 'Zone 1' })
           ),
           _react2.default.createElement(
             'li',
             null,
-            _react2.default.createElement(_Zone2.default, null)
+            _react2.default.createElement(_Zone2.default, { name: 'Zone 2' })
           ),
           _react2.default.createElement(
             'li',
             null,
-            _react2.default.createElement(_Zone2.default, null)
+            _react2.default.createElement(_Zone2.default, { name: 'Zone 3' })
           ),
           _react2.default.createElement(
             'li',
             null,
-            _react2.default.createElement(_Zone2.default, null)
+            _react2.default.createElement(_Zone2.default, { name: 'Zone 4' })
           )
         )
       );
@@ -9701,7 +9701,7 @@ var Zone = function (_Component) {
           _react2.default.createElement(
             "a",
             { href: "" },
-            "Zone 1"
+            this.props.name
           )
         ),
         _react2.default.createElement(
