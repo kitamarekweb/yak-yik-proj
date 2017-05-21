@@ -9686,31 +9686,31 @@ var Zone = function (_Component) {
   }
 
   _createClass(Zone, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
+        'div',
         null,
         _react2.default.createElement(
-          "h2",
+          'h2',
           null,
           _react2.default.createElement(
-            "a",
-            { href: "" },
+            'a',
+            { style: { textDecoration: 'none' }, href: '' },
             this.props.currentZone.name
           )
         ),
         _react2.default.createElement(
-          "span",
+          'span',
           null,
           this.props.currentZone.zipCode
         ),
-        _react2.default.createElement("br", null),
+        _react2.default.createElement('br', null),
         _react2.default.createElement(
-          "span",
+          'span',
           null,
           this.props.currentZone.numComments,
-          " comments"
+          ' comments'
         )
       );
     }
