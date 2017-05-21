@@ -29,8 +29,9 @@ class Comments extends Component {
             {commentList}
           </ul>
 
-          <input className="form-control" type="text" placeholder="Username"/>
-          <input className="form-control" type="text" placeholder="Comment"/>
+          <input className="form-control" type="text" placeholder="Username"/><br/>
+          <input className="form-control" type="text" placeholder="Comment"/><br/>
+          <button className="btn btn-info">Submit Comment</button>
 
         </div>
       </div>
