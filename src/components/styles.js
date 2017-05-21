@@ -1,15 +1,21 @@
 export default {
-  container: {
-    padding: 16,
-    background: 'pink',
-    marginTop: 12,
-    border: '1px solid #000'
+  universal: {
+
   },
-  header: {
-    marginBottom: 3 + 'px'
-  },
-  title: {
-    textDecoration: 'none',
-    color: 'red'
+  zone: {
+    container: {
+      padding: 16,
+      background: 'pink',
+      marginTop: 12,
+      border: '1px solid #000'
+    },
+    header: {
+      marginTop: 0,
+      marginBottom: 3 + 'px'
+    },
+    title: {
+      textDecoration: 'none',
+      color: 'red'
+    }
   }
 }
