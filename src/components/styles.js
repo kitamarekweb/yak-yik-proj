@@ -2,6 +2,14 @@ export default {
   universal: {
 
   },
+
+  comment: {
+    commentsBox: {
+      padding: 12,
+      background: 'deeppink',
+      border: '1px solid #000'}
+  },
+
   zone: {
     container: {
       padding: 16,
