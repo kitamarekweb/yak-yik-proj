@@ -2,3 +2,5 @@
 .idea/workspace.xml
 .idea/yak-yik.iml
 node_modules/
+bundel.js
+bundel.map

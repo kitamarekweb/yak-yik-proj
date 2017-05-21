@@ -9696,7 +9696,7 @@ var Zone = function (_Component) {
           null,
           _react2.default.createElement(
             'a',
-            { style: { textDecoration: 'none' }, href: '' },
+            { style: { textDecoration: 'none', color: 'red' }, href: '' },
             this.props.currentZone.name
           )
         ),
