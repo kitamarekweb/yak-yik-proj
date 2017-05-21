@@ -28,6 +28,10 @@ class Comments extends Component {
           <ul style={styles.comment.commentsList}>
             {commentList}
           </ul>
+
+          <input className="form-control" type="text" placeholder="Username"/>
+          <input className="form-control" type="text" placeholder="Comment"/>
+
         </div>
       </div>
     )
