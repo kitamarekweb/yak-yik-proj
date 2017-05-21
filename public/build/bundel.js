@@ -6692,7 +6692,11 @@ exports.default = {
     commentsBox: {
       padding: 12,
       background: 'deeppink',
-      border: '1px solid #000' }
+      border: '1px solid #000'
+    },
+    commentsList: {
+      listStyleType: 'none'
+    }
   },
 
   zone: {
@@ -9727,11 +9731,27 @@ var Comment = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        this.props.currentComment.username,
-        _react2.default.createElement('br', null),
-        this.props.currentComment.body,
-        _react2.default.createElement('br', null),
-        this.props.currentComment.timestamp
+        _react2.default.createElement(
+          'p',
+          { style: { fontSize: 20, fontWeight: 400 } },
+          this.props.currentComment.body
+        ),
+        _react2.default.createElement(
+          'span',
+          { style: { fontWeight: 200 } },
+          this.props.currentComment.username
+        ),
+        _react2.default.createElement(
+          'span',
+          { style: { fontWeight: 200, marginLeft: 12, marginRight: 12 } },
+          '|'
+        ),
+        _react2.default.createElement(
+          'span',
+          { style: { fontWeight: 200 } },
+          this.props.currentComment.timestamp
+        ),
+        _react2.default.createElement('hr', null)
       );
     }
   }]);
@@ -9812,7 +9832,7 @@ var Comments = function (_Component) {
           { style: _styles2.default.comment.commentsBox },
           _react2.default.createElement(
             'ul',
-            null,
+            { style: _styles2.default.comment.commentsList },
             commentList
           )
         )

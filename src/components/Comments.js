@@ -25,7 +25,7 @@ class Comments extends Component {
       <div>
         <h2>Comments: Zone 1</h2>
         <div style={styles.comment.commentsBox}>
-          <ul style={{listStyleType:'none'}}>
+          <ul style={styles.comment.commentsList}>
             {commentList}
           </ul>
         </div>
