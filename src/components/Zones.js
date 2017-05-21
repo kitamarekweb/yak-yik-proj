@@ -17,13 +17,16 @@ class Zones extends Component {
 
   render() {
 
+    const listItems = this.state.list.map((zone, i) => {
+      return(
+        <li><Zone currentZone={zone}/></li>
+      )
+    })
+
     return (
       <div>
         <ol>
-          <li><Zone currentZone={firstZone}/></li>
-          <li><Zone currentZone={secondZone}/></li>
-          <li><Zone currentZone={thirdZone}/></li>
-          <li><Zone currentZone={fourthZone}/></li>
+          {listItems}
         </ol>
       </div>
     )
