@@ -9557,7 +9557,6 @@ var Home = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'y',
         _react2.default.createElement(_Zones2.default, null)
       );
     }
