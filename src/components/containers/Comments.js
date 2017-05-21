@@ -19,7 +19,7 @@ class Comments extends Component {
   }
 
   submitComment(){
-    console.log('submitComment')
+    console.log('submitComment: ' +JSON.stringify(this.state.comment))
   }
 
   updateUsername(event){
