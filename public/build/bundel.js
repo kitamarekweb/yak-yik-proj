@@ -9733,6 +9733,11 @@ var Comments = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Comments.__proto__ || Object.getPrototypeOf(Comments)).call(this));
 
     _this.state = {
+      comment: {
+        username: '',
+        body: '',
+        timestamp: ''
+      },
       list: [{ body: 'comment 1', username: 'dtrump', timestamp: '10:30' }, { body: 'comment 2', username: 'hclinton', timestamp: '10:34' }, { body: 'comment 3', username: 'gjohnson', timestamp: '10:39' }]
     };
     return _this;
@@ -9741,7 +9746,47 @@ var Comments = function (_Component) {
   _createClass(Comments, [{
     key: 'submitComment',
     value: function submitComment() {
-      console.log('submitComment');
+      console.log('submitComment: ' + JSON.stringify(this.state.comment));
+
+      var updatedList = Object.assign([], this.state.list);
+      updatedList.push(this.state.comment);
+      this.setState({
+        list: updatedList
+      });
+    }
+  }, {
+    key: 'updateUsername',
+    value: function updateUsername(event) {
+      // console.log('updateUsername: '+ event.target.value)
+      //this.state.comment['username'] = event.target.value // WRONG
+
+      //we create a copy of full state
+      var updatedComment = Object.assign({}, this.state.comment);
+      updatedComment['username'] = event.target.value;
+      this.setState({
+        comment: updatedComment
+      });
+    }
+  }, {
+    key: 'updateBody',
+    value: function updateBody(event) {
+      // console.log('updateBody: '+ event.target.value)
+
+      var updatedComment = Object.assign({}, this.state.comment); //copy of object 'comment' from state, that how React works, always do copy of element before change
+      updatedComment['body'] = event.target.value;
+      this.setState({
+        comment: updatedComment
+      });
+    }
+  }, {
+    key: 'updateTimestamp',
+    value: function updateTimestamp(event) {
+      //we create a copy of full state
+      var updatedTimestamp = Object.assign({}, this.state.comment);
+      updatedTimestamp['timestamp'] = event.target.value;
+      this.setState({
+        comment: updatedTimestamp
+      });
     }
   }, {
     key: 'render',
@@ -9770,9 +9815,11 @@ var Comments = function (_Component) {
             { style: _styles2.default.comment.commentsList },
             commentList
           ),
-          _react2.default.createElement('input', { className: 'form-control', type: 'text', placeholder: 'Username' }),
+          _react2.default.createElement('input', { onChange: this.updateUsername.bind(this), className: 'form-control', type: 'text', placeholder: 'Username' }),
           _react2.default.createElement('br', null),
-          _react2.default.createElement('input', { className: 'form-control', type: 'text', placeholder: 'Comment' }),
+          _react2.default.createElement('input', { onChange: this.updateBody.bind(this), className: 'form-control', type: 'text', placeholder: 'Comment' }),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement('input', { onChange: this.updateTimestamp.bind(this), className: 'form-control', type: 'text', placeholder: 'Timestamp' }),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
             'button',
@@ -9834,6 +9881,11 @@ var Zones = function (_Component) {
   }
 
   _createClass(Zones, [{
+    key: 'updateZone',
+    value: function updateZone(event) {
+      console.log('updateZone: ' + event.target.value);
+    }
+  }, {
     key: 'render',
     value: function render() {
 
@@ -9852,6 +9904,15 @@ var Zones = function (_Component) {
           'ol',
           null,
           listItems
+        ),
+        _react2.default.createElement('input', { onChange: this.updateZone.bind(this), className: 'form-control', type: 'text', placeholder: 'Name' }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('input', { onChange: this.updateZone.bind(this), className: 'form-control', type: 'text', placeholder: 'Zip Code' }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'button',
+          { className: 'btn btn-danger' },
+          'Add Zone'
         )
       );
     }
