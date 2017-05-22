@@ -33,6 +33,12 @@ class Zones extends Component {
         }
 
         console.log(JSON.stringify(response.body))
+
+        let results = response.body.results
+        this.setState({
+          list: results
+        })
+
       })
 
   }
