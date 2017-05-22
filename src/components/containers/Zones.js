@@ -6,6 +6,10 @@ class Zones extends Component {
   constructor() {
     super()
     this.state = {
+      zone: {
+        name: '',
+        zipCode: ''
+      },
       list: [
         {name: 'Zone 1', zipCode: '10012', numComments: 10},
         {name: "Zone 2", zipCode: '10013', numComments: 20},
