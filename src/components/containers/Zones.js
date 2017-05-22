@@ -22,14 +22,15 @@ class Zones extends Component {
     console.log('componentDidMount')
 
     // this is to communicate with backend
-    APIManager.get('/api/zone', null, (err, results) => {
+    APIManager.get('/api/zone', null, (err, response) => {
       if(err){
         alert('ERROR: ' +err.message)
         return
       }
 
+      console.log('RESULTS: ' +JSON.stringify(response.results))
       this.setState({
-        list: results
+        list: response.results
       })
     })
 
