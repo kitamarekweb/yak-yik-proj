@@ -19,6 +19,12 @@ class Zones extends Component {
   //we now implement it ourselves to then change its reaction for our own to run when its called
   componentDidMount(){
     console.log('componentDidMount')
+    superagent
+      .get('/api/zone')
+      .query()
+      .set()
+      .end()
+
   }
 
   updateZone (event){
