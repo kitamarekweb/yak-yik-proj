@@ -2,6 +2,9 @@
 .idea/workspace.xml
 .idea/yak-yik.iml
 node_modules/
+.env
 bundel.js
 bundel.map
 /public/build/
+public/images/
+public/javascripts/
