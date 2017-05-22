@@ -30,6 +30,11 @@ class Zones extends Component {
     })
   }
 
+  addZone (){
+    console.log('ADD ZONE: '+JSON.stringify(this.state.zone))
+  }
+
+
   render() {
 
     const listItems = this.state.list.map((zone, i) => {
@@ -46,7 +51,7 @@ class Zones extends Component {
 
         <input id="name" onChange={this.updateZone.bind(this)} className="form-control" type="text" placeholder="Name"/><br/>
         <input id="zipCode" onChange={this.updateZone.bind(this)} className="form-control" type="text" placeholder="Zip Code"/><br/>
-        <button className="btn btn-danger">Add Zone</button>
+        <button onClick={this.addZone.bind(this)} className="btn btn-danger">Add Zone</button>
 
       </div>
     )
