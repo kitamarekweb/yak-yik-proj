@@ -15,6 +15,10 @@ class Comments extends Component {
     }
   }
 
+  componentDidMount(){
+
+  }
+
   submitComment(){
     console.log('submitComment: ' +JSON.stringify(this.state.comment))
 
