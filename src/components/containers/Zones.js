@@ -19,6 +19,8 @@ class Zones extends Component {
   //we now implement it ourselves to then change its reaction for our own to run when its called
   componentDidMount(){
     console.log('componentDidMount')
+
+    // this is to communicate with backend
     superagent
       .get('/api/zone')
       .query(null)
@@ -30,7 +32,7 @@ class Zones extends Component {
           return
         }
 
-        console.log(JSON.stringify(response))
+        console.log(JSON.stringify(response.body))
       })
 
   }
