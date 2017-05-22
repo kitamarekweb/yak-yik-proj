@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Zone from '../presentation/Zone'
+import superagent from 'superagent'
 
 class Zones extends Component {
   //creating state
@@ -12,6 +13,12 @@ class Zones extends Component {
       },
       list: []
     }
+  }
+
+  //its React function, this function gets called when the component show up
+  //we now implement it ourselves to then change its reaction for our own to run when its called
+  componentDidMount(){
+    console.log('componentDidMount')
   }
 
   updateZone (event){
