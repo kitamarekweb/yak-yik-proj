@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Comment from '../presentation/Comment'
 import styles from '../presentation/styles'
+import superagent from 'superagent'
 
 class Comments extends Component {
   constructor() {
@@ -16,7 +17,27 @@ class Comments extends Component {
   }
 
   componentDidMount(){
+    console.log('componentDidMount-Comments')
 
+    // this is to communicate with backend
+    superagent
+      .get('/api/comment')
+      .query(null)
+      .set('Accept', 'application/json')
+      .end((err, response) => {
+
+        if(err){
+          alert('ERROR: ' +err)
+          return
+        }
+
+        console.log(JSON.stringify(response.body))
+
+        let results = response.body.results
+        this.setState({
+          list: results
+        })
+      })
   }
 
   submitComment(){

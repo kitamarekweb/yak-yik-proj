@@ -38,7 +38,6 @@ class Zones extends Component {
         this.setState({
           list: results
         })
-
       })
 
   }
