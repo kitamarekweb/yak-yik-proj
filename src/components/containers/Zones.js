@@ -21,8 +21,8 @@ class Zones extends Component {
     console.log('componentDidMount')
     superagent
       .get('/api/zone')
-      .query()
-      .set()
+      .query(null)
+      .set('Accept', 'application/json')
       .end()
 
   }
