@@ -23,7 +23,15 @@ class Zones extends Component {
       .get('/api/zone')
       .query(null)
       .set('Accept', 'application/json')
-      .end()
+      .end((err, response) => {
+
+        if(err){
+          alert('ERROR: ' +err)
+          return
+        }
+
+        console.log(JSON.stringify(response))
+      })
 
   }
 
