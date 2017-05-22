@@ -28,7 +28,7 @@ class Zones extends Component {
         return
       }
 
-      console.log('RESULTS: ' +JSON.stringify(response.results))
+      // console.log('RESULTS: ' +JSON.stringify(response.results))
       this.setState({
         list: response.results
       })
