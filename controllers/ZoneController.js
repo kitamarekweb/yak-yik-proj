@@ -24,14 +24,17 @@ module.exports = {
   },
   
   create: function (params, callback) {
-    var zips = params['zipCodes']
-    var zip = zips.split(',')
-    var newZips = []
-    zip.forEach(function (zipCode) {
-      newZips.push(zipCode.trim())
-    })
-
-    params['zipCodes'] = newZips
+    //-- we had to comment so tha APIManager would work, this is now done in FrontEnd by React
+    // var zips = params['zipCodes']
+    // if (zips != null){
+    //   var zip = zips.split(',')
+    //   var newZips = []
+    //   zip.forEach(function (zipCode) {
+    //     newZips.push(zipCode.trim())
+    //   })
+    // }
+    //
+    // params['zipCodes'] = newZips
 
     Zone.create(params, function (err, zone) {
       if (err){

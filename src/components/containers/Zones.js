@@ -47,10 +47,11 @@ class Zones extends Component {
   }
 
   addZone (){
-    console.log('ADD ZONE: '+JSON.stringify(this.state.zone))
 
     let updatedZone = Object.assign({}, this.state.zone)
+    // updatedZone['zipCodes'] -> this is to create property 'zipCodes' inside updatedZone so we can store array of zip codes
     updatedZone['zipCodes'] = updatedZone.zipCode.split(',') //backend is expecting Array, so we have to take string and convert to array
+    console.log('ADD ZONE: '+JSON.stringify(updatedZone))
 
     APIManager.post('/api/zone', updatedZone, (err, response) => {
       if (err){
@@ -58,13 +59,8 @@ class Zones extends Component {
         return
       }
 
-      console.log('ZONE CREATED: ' +JSON.stringify(response))
+      console.log('ZONE CREATED: '+JSON.stringify(response))
     })
-    // let updatedList = Object.assign([], this.state.list)
-    // updatedList.push(this.state.zone)
-    // this.setState({
-    //   list: updatedList
-    // })
   }
 
 

@@ -31,20 +31,22 @@ export default {
     superagent
       .post(url)
       .send(body)
-      .set('Accept', 'text/json')
+      .set('Accept', 'application/json')
       .end((err, response) => {
         if(err){
-          callback(err, null)
+          callback(err, null) //this is a REQUEST failure, NOT api failure
           return
         }
 
+        //this is API failure, when connfirmation will be 'fail'
         const confirmation = response.body.confirmation
         if (confirmation != 'success'){
           callback({message: response.body.message}, null)
           return
         }
 
-        callback(null, response.body)
+        callback(null, response.body) //response.body its the thing that comes form SUPERAGENT
+
       })
   },
 
