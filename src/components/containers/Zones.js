@@ -60,6 +60,12 @@ class Zones extends Component {
       }
 
       console.log('ZONE CREATED: '+JSON.stringify(response))
+
+      let updatedList = Object.assign([], this.state.list)
+      updatedList.push(response.result)
+      this.setState({
+        list: updatedList
+      })
     })
   }
 
