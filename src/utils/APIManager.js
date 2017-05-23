@@ -40,7 +40,7 @@ export default {
 
         //this is API failure, when connfirmation will be 'fail'
         const confirmation = response.body.confirmation
-        if (confirmation != 'success'){
+        if (confirmation != 'success to create'){
           callback({message: response.body.message}, null)
           return
         }
