@@ -33,21 +33,20 @@ class Comments extends Component {
   submitComment(comment){
     console.log('submitComment: ' +JSON.stringify(comment)) //the container has successfully received data from the presentation component
 
-    // console.log('submitComment: ' +JSON.stringify(this.state.comment))
-    //
-    // APIManager.post('api/comment', this.state.comment, (err, response) => {
-    //   if (err){
-    //     alert(err)
-    //     return
-    //   }
-    //
-    //   console.log(JSON.stringify(response))
-    //   let updatedList = Object.assign([], this.state.list)
-    //   updatedList.push(response.result)
-    //   this.setState({
-    //     list: updatedList
-    //   })
-    // })
+    let updatedComment = Object.assign({}, comment)
+    APIManager.post('api/comment', updatedComment, (err, response) => {
+      if (err){
+        alert(err)
+        return
+      }
+
+      console.log(JSON.stringify(response))
+      let updatedList = Object.assign([], this.state.list)
+      updatedList.push(response.result)
+      this.setState({
+        list: updatedList
+      })
+    })
   }
 
   updateUsername(event){
