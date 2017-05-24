@@ -7,10 +7,10 @@ class Comments extends Component {
   constructor() {
     super()
     this.state = {
-      comment: {
-        username: '',
-        body: ''
-      },
+      // comment: {
+      //   username: '',
+      //   body: ''
+      // },
       list: []
     }
   }
