@@ -8,10 +8,6 @@ class Zones extends Component {
   constructor() {
     super()
     this.state = {
-      zone: {
-        name: '',
-        zipCode: ''
-      },
       list: []
     }
   }
@@ -34,16 +30,6 @@ class Zones extends Component {
       })
     })
 
-  }
-
-  updateZone (event){
-    console.log('updateZone: ' +event.target.id+ '==' +event.target.value)
-
-    let updatedZone = Object.assign({}, this.state.zone)
-    updatedZone[event.target.id] = event.target.value
-    this.setState ({
-      zone: updatedZone
-    })
   }
 
   addZone (zone){
