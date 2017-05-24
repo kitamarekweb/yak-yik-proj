@@ -8,6 +8,7 @@ class Zones extends Component {
   constructor() {
     super()
     this.state = {
+      selected: 0,
       list: []
     }
   }
@@ -33,7 +34,6 @@ class Zones extends Component {
   }
 
   addZone (zone){
-
     let updatedZone = Object.assign({}, zone)
 
     // updatedZone['zipCodes'] -> this is to create property 'zipCodes' inside updatedZone so we can store array of zip codes
@@ -61,7 +61,7 @@ class Zones extends Component {
 
     const listItems = this.state.list.map((zone, i) => {
       return(
-        <li key={i}><Zone currentZone={zone}/></li>
+        <li key={i}><Zone isSelcected={false} currentZone={zone}/></li>
       )
     })
 
