@@ -34,11 +34,19 @@ class Comments extends Component {
   submitComment(){
     console.log('submitComment: ' +JSON.stringify(this.state.comment))
 
-    let updatedList = Object.assign([], this.state.list)
-    updatedList.push(this.state.comment)
-    this.setState({
-      list: updatedList
+    APIManager.post('api/comment', this.state.comment, (err, response) => {
+      if (err){
+        alert(err)
+        return
+      }
+
+      console.log(JSON.stringify(response))
     })
+    // let updatedList = Object.assign([], this.state.list)
+    // updatedList.push(this.state.comment)
+    // this.setState({
+    //   list: updatedList
+    // })
   }
 
   updateUsername(event){
