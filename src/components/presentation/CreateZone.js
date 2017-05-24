@@ -20,7 +20,7 @@ class CreateZone extends Component {
     console.log('submitZone: ' +JSON.stringify(this.state.zone))
     let updated = Object.assign({}, this.state.zone)
     updated['zipCodes'] = updated.zipCode.split(',') //backend is expecting Array, so we have to take string and convert to array
-    this.props.onCreate(this.state.zone)
+    this.props.onCreate(updated)
   }
 
   render() {
