@@ -56,8 +56,12 @@ class Zones extends Component {
     })
   }
 
-  selectZone(){
-    console.log('selectZone')
+  selectZone(index){
+    console.log('selectZone: ' +index)
+    this.setState({
+      selected: index
+    })
+
   }
 
   render() {
