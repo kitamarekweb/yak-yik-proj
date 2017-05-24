@@ -87,9 +87,6 @@ class Comments extends Component {
             {commentList}
           </ul>
 
-          <input onChange={this.updateUsername.bind(this)} className="form-control" type="text" placeholder="Username"/><br/>
-          <input onChange={this.updateBody.bind(this)} className="form-control" type="text" placeholder="Comment"/><br/>
-          <button onClick={this.submitComment.bind(this)} className="btn btn-info">Submit Comment</button>
           <CreateComment/>
         </div>
       </div>
