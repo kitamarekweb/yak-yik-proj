@@ -49,30 +49,6 @@ class Comments extends Component {
     })
   }
 
-  updateUsername(event){
-    // console.log('updateUsername: '+ event.target.value)
-    //this.state.comment['username'] = event.target.value // WRONG
-
-    //we create a copy of full state
-    let updatedComment = Object.assign({}, this.state.comment)
-    updatedComment['username'] = event.target.value
-    this.setState({
-      comment: updatedComment
-    })
-  }
-
-  updateBody(event){
-    // console.log('updateBody: '+ event.target.value)
-
-    let updatedComment = Object.assign({}, this.state.comment) //copy of object 'comment' from state, that how React works, always do copy of element before change
-    updatedComment['body'] = event.target.value
-    this.setState({
-      comment: updatedComment
-    })
-  }
-
-
-
   render() {
     const commentList = this.state.list.map((comment, i) => {
       return (
