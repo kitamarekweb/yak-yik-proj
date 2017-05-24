@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Zone from '../presentation/Zone'
+import { CreateZone, Zone } from '../presentation/'
 import { APIManager } from '../../utils'
 
 
