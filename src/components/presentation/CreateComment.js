@@ -13,6 +13,12 @@ class CreateComment extends Component {
 
   updateComment(event){
     console.log('updateComment: ' + event.target.id + '==' + event.target.value)
+    let updatedComment = Object.assign({}, this.state.comment)
+    //create parameter 'event.target.id' which will has value of 'event.target.value'
+    updatedComment[event.target.id] = event.target.value
+    this.setState({
+      comment: updatedComment
+    })
   }
 
   render(){
