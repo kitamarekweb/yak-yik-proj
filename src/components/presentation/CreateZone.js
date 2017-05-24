@@ -18,6 +18,7 @@ class CreateZone extends Component {
 
   submitZone(event){
     console.log('submitZone: ' +JSON.stringify(this.state.zone))
+    this.props.onCreate(this.state.zone)
   }
 
   render() {
