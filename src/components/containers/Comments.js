@@ -30,7 +30,7 @@ class Comments extends Component {
     })
   }
 
-  submitComment(){
+  submitComment(comment){
     console.log('submitComment: ')
 
     // console.log('submitComment: ' +JSON.stringify(this.state.comment))
