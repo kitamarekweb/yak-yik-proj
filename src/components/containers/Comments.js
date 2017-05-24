@@ -87,7 +87,7 @@ class Comments extends Component {
             {commentList}
           </ul>
 
-          <CreateComment/>
+          <CreateComment onCreate={this.submitComment.bind(this)}/>
         </div>
       </div>
     )
