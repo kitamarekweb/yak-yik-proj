@@ -40,6 +40,11 @@ class Comments extends Component {
       }
 
       console.log(JSON.stringify(response))
+      let updatedList = Object.assign([], this.state.list)
+      updatedList.push(response.result)
+      this.setState({
+        list: updatedList
+      })
     })
     // let updatedList = Object.assign([], this.state.list)
     // updatedList.push(this.state.comment)
