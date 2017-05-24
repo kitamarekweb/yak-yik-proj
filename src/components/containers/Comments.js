@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Comment from '../presentation/Comment'
+import { CreateComment, Comment } from '../presentation/'
 import styles from '../presentation/styles'
 import { APIManager } from '../../utils'
 
