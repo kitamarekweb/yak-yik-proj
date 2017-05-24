@@ -72,7 +72,7 @@ class Comments extends Component {
 
 //Timestamp is not needed because BACKEND will be giving the time
   // updateTimestamp(event){
-    //we create a copy of full state
+  //we create a copy of full state
   //   let updatedTimestamp = Object.assign({}, this.state.comment)
   //   updatedTimestamp['timestamp'] = event.target.value
   //   this.setState({
