@@ -31,7 +31,7 @@ class Comments extends Component {
   }
 
   submitComment(comment){
-    console.log('submitComment: ' +JSON.stringify(comment))
+    console.log('submitComment: ' +JSON.stringify(comment)) //the container has successfully received data from the presentation component
 
     // console.log('submitComment: ' +JSON.stringify(this.state.comment))
     //
