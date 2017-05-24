@@ -21,6 +21,7 @@ class CreateComment extends Component {
 
   submitComment(event){
     console.log('submitComment: ' +JSON.stringify(this.state.comment))
+    this.props.onCreate()
   }
 
   render(){

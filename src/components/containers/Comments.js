@@ -31,21 +31,23 @@ class Comments extends Component {
   }
 
   submitComment(){
-    console.log('submitComment: ' +JSON.stringify(this.state.comment))
+    console.log('submitComment: ')
 
-    APIManager.post('api/comment', this.state.comment, (err, response) => {
-      if (err){
-        alert(err)
-        return
-      }
-
-      console.log(JSON.stringify(response))
-      let updatedList = Object.assign([], this.state.list)
-      updatedList.push(response.result)
-      this.setState({
-        list: updatedList
-      })
-    })
+    // console.log('submitComment: ' +JSON.stringify(this.state.comment))
+    //
+    // APIManager.post('api/comment', this.state.comment, (err, response) => {
+    //   if (err){
+    //     alert(err)
+    //     return
+    //   }
+    //
+    //   console.log(JSON.stringify(response))
+    //   let updatedList = Object.assign([], this.state.list)
+    //   updatedList.push(response.result)
+    //   this.setState({
+    //     list: updatedList
+    //   })
+    // })
   }
 
   updateUsername(event){
