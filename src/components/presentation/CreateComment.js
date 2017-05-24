@@ -12,7 +12,7 @@ class CreateComment extends Component {
 
 
   updateComment(event){
-    console.log('updateComment: '+ event.target.id) + '==' + event.target.value
+    console.log('updateComment: ' + event.target.id + '==' + event.target.value)
   }
 
   render(){
